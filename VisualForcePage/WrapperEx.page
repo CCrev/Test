@@ -1,0 +1,16 @@
+<apex:page Controller="VFWrapper">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockButtons>
+            	<apex:commandButton action="{!changebill}" value="Update State"/>
+            </apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!wrapL}" var="moreVar">
+            	<apex:column>
+                    <apex:inputCheckbox value="{!moreVar.selected}" id="inputId"/>
+                </apex:column>
+                    <apex:column value="{!moreVar.thisAccount.name}"/>
+                	<apex:column value="{!moreVar.thisAccount.billingState}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
